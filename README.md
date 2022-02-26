@@ -1,5 +1,6 @@
 # pands-problem-sheet
-David Higgins
+## 51267 Programming and Scripting - 2022
+## G00411302 David Higgins
 Problem sheet code - weekly tasks
 
 This repository will contain the commits for the weekly tasks on 52167 Programming and Scripting.
