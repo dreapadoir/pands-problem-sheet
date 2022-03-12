@@ -1,3 +1,4 @@
+#weekday.py
 #program to determine if it is a weekday or the weekend
 #Author: David Higgins
 
