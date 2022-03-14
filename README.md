@@ -72,3 +72,16 @@ I used the strftime method from the datetime module to assign the actual weekday
 ## Week 6 solution
 
 ### References
+
+## Week 7 problem
+
+## Week 7 solution
+
+### References
+
+## Week 8 problem
+
+## Week 8 solution
+
+### References
+(https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot)
