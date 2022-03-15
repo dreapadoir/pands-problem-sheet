@@ -12,7 +12,7 @@ f = xpoints                     #creates f(x) = x
 g = xpoints ** 2                #creates g(x) = x^2
 h = xpoints ** 3                #creates h(x) = x^3
 
-names = ['$f(x) = x$','$gx) = x^{2}$', '$h(x) = x^{3}$'] #list of the functions names in TeX
+names = ['$f(x) = x$','$g(x) = x^{2}$', '$h(x) = x^{3}$'] #list of the functions names in TeX
 
 def xtickrange(tickmax):                #defines a function that returns a list of values at 0.5 unit intervals up to the max of a range
     domain = range(0,tickmax)
@@ -20,7 +20,7 @@ def xtickrange(tickmax):                #defines a function that returns a list 
     while max(ticklist) < max(domain):
         ticklist.append(max(ticklist) + 0.5)
 
-xnew = np.linspace(0, 4, num=40, endpoint=True)
+xnew = np.linspace(0, 4, num=40, endpoint=True)  #this block of code creates smooth curves for the quadratic and cubic
 hcubic = interp1d(xpoints, g, kind='cubic')
 gcubic = interp1d(xpoints, h, kind='cubic')
 
