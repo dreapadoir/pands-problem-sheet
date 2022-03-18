@@ -42,4 +42,4 @@ elif len(filepaths) == 1:
     readData()
 
 elif len(filepaths) == 0:
-    print("File not found")
+    print("File {} not found".format(filename))
