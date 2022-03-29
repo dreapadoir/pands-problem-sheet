@@ -92,7 +92,7 @@ The os and sys modules are required for this code. The sys module allows a filen
 
 I defined a function called readData that will open the file as text and with read privileges. The contents of the file are then stored in a variable called data. Next, a variable numberOfEs is assigned the result of using count() function on data (with e passed in as an argument to count). readData then returns a string stating the number of es in the file.
 
-readData requires the filepath to open the file using the with ...open function. The filepath is found using os.walk. This is done by specifying a starting directory, in this case /home/, and that the search is to be carried out top down. os.walk searches for files matching the value of variable filename. If a file is found, its filepath is appended to the list filepaths.
+readData requires the filepath to open the file using the with ...open function. The filepath is found using os.walk. This is done by specifying a starting directory, in this case the root directory, and that the search is to be carried out top down. os.walk searches for files matching the value of variable filename. If a file is found, its filepath is appended to the list filepaths.
 
 As os.walk searches the home directory and all its subdirectories, it is possible that more than one filepath is found since files with the same name could exist in different directories. If there is more than one filepath found, an if statement is used to manage this case. A variable index is initalised as 1 to number the different filepaths. A second variable, choicetruth, is initialised to manage a try except loop.
 
