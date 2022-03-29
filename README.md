@@ -45,13 +45,13 @@ Write a program that asks the user to input any positive integer and outputs the
 
 ## Week 4 solution
 [collatz.py](collatz.py)
-The user is prompted to enter a positive integer using the input() function. The value entered is explictly declared as an integer using int() and assigned to the variable number. A variable index is intialised as 0. This variable will be used to track the number of iterations required to converge to 1.
+The user is prompted to enter a positive integer using the input() function. The value entered is explictly declared as an integer using int() and assigned to the variable number. A variable index is intialised as 0. This variable will be used to track the number of iterations required to converge to 1. A list called collatzlist is initialised with the current value of number (the number entered by the user).
 
 A while loop is initiated with the condition that number is not equal to 1. Within the while loop is an if statement that runs one of two blocks of code depending on whether the current value of number is odd or even.
 
-On completion of this calculation, the variable number is updated with the new value. The value of index is incremented by 1. The print function is used to print out the current values of number and index.
+On completion of this calculation, the variable number is updated with the new value. The value of index is incremented by 1. The append function is used to add the current value of number to the collatzlist.
 
-When number is equal to 1, the while loop terminates and a string is printed stating the sequence has converged to 1 and how many iterations it took to converge.
+When number is equal to 1, the while loop terminates and a string is printed stating the sequence has converged to 1 and how many iterations it took to converge. The collatzlist is printed showing the sequence from the initial value the user entered to when it converged to one.
 
 ### References
 [Collatz Conjecture - Wikipedia](https://en.wikipedia.org/wiki/Collatz_conjecture)
@@ -62,7 +62,9 @@ Create a program that returns whether today is a weekday or the weekend.
 ## Week 5 solution
 [weekday.py](weekday.py)
 
-I used the strftime method from the datetime module to assign the actual weekday to the variable day. Since the days of the week don't change, a tuple is a suitable structure to use. I created two tuples, one for weekdays and one for the weekend. Using an if statement I checked if the value of day is in the weekday tuple first. If it is, a string is printed stating what day it is and that it is a weekday. If the if statement is false, an elif statements checks if the value of day is in the tuple weekend. By default, it should be since the days of the week are a finite set. It prints a string saying what day it is and that it is the weekend.
+I used the strftime method from the datetime module to assign the actual weekday to the variable day. Since the days of the week don't change, a tuple is a suitable structure to use. I created two tuples, one for weekdays and one for the weekend. 
+
+Using an if statement I checked if the value of day is in the weekday tuple first. If it is, a string is printed stating what day it is and that it is a weekday. If the if statement is false, an elif statements checks if the value of day is in the tuple weekend. By default, it should be since the days of the week are a finite set. It prints a string saying what day it is and that it is the weekend.
 
 ### References
 (https://www.delftstack.com/howto/python/python-datetime-day-of-week/)
