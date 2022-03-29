@@ -70,10 +70,19 @@ Using an if statement I checked if the value of day is in the weekday tuple firs
 (https://www.delftstack.com/howto/python/python-datetime-day-of-week/)
 
 ## Week 6 problem
+Write a program that takes a positive floating-point number as input and outputs an approximation of its square root.
 
 ## Week 6 solution
+I used Newton's method to approximate a square root for this task. Newton's method requires a number and a tolerance. I created two variables, varN and varTol, to hold these values and explicitly declared them as floats. varX is created and set to varN as the first guess.
+
+This method involves carrying out the calculation root = 0.5 * (X + (N / X)), where N is the number for which the square root is being sought and X is the current guess of the root. Initially X is set to N. I defined a function, sqrt(), that carries out this calculation. 
+
+varRoot is defined as the value returned by sqrt() with varN and varX passed in as arguments. varRoot then becomes the current guess of the square root. A while loop then compares the difference between varRoot and varX and the value of varTol. If the difference between the current guess (varRoot) and the previous guess (varX) is greater than the tolerance (varTol), the program sets varX equal to varRoot and calls sqrt() again. This will run until the difference between the guesses is less than the tolerance.
+
+When the while loop completes, a print statement shows the original number and its approximated square root.
 
 ### References
+(https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N.)
 
 ## Week 7 problem
 
