@@ -62,7 +62,7 @@ Create a program that returns whether today is a weekday or the weekend.
 ## Week 5 solution
 [weekday.py](weekday.py)
 
-I used the strftime method from the datetime module to assign the actual weekday to the variable day. 
+I used the strftime method from the datetime module to assign the actual weekday to the variable day. Since the days of the week don't change, a tuple is a suitable structure to use. I created two tuples, one for weekdays and one for the weekend. Using an if statement I checked if the value of day is in the weekday tuple first. If it is, a string is printed stating what day it is and that it is a weekday. If the if statement is false, an elif statements checks if the value of day is in the tuple weekend. By default, it should be since the days of the week are a finite set. It prints a string saying what day it is and that it is the weekend.
 
 ### References
 (https://www.delftstack.com/howto/python/python-datetime-day-of-week/)
