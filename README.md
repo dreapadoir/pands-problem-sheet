@@ -85,10 +85,29 @@ When the while loop completes, a print statement shows the original number and i
 (https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N.)
 
 ## Week 7 problem
+Write a program that reads in a text file and outputs the number of e's it contains.
 
 ## Week 7 solution
+The os and sys modules are required for this code. The sys module allows a filename to be taken in from the command line as an argument. I created a variable called filename to take in the name from the user at the command line. I also initialised an empty list called filepaths to hold the paths to any files matching that filename on the users machine.
+
+I defined a function called readData that will open the file as text and with read privileges. The contents of the file are then stored in a variable called data. Next, a variable numberOfEs is assigned the result of using count() function on data (with e passed in as an argument to count). readData then returns a string stating the number of es in the file.
+
+readData requires the filepath to open the file using the with ...open function. The filepath is found using os.walk. This is done by specifying a starting directory, in this case /home/, and that the search is to be carried out top down. os.walk searches for files matching the value of variable filename. If a file is found, its filepath is appended to the list filepaths.
+
+As os.walk searches the home directory and all its subdirectories, it is possible that more than one filepath is found since files with the same name could exist in different directories. If there is more than one filepath found, an if statement is used to manage this case. A variable index is initalised as 1 to number the different filepaths. A second variable, choicetruth, is initialised to manage a try except loop.
+
+A for loop is used to print all the filepaths in the list filepaths and assigns a number to each one. A while loop is then used to manage potential errors. The condition is that variable choicetruth is True. The try block asks the user to enter the number of the filepath they want to use. That value is taken in as the variable choice. The variable fchoice then takes the value of choice - 1, so fchoice will match the indexing of the list.
+
+If the user enters a valid value, readData is called and choicetruth is updated to False, closing the loop. If an exception is thrown because the user enters a value outside the range 1 to len(filepaths) or type is not equal to int, the except block prints a statement telling the user to choose a number between 1 and len(filepaths). 
+
+An elif statement sets fchoice to 0 if there is only one filepath in the list filepaths and then calls readData.
+
+A second elif statement prints a message saying that filename is not found if there are no filepaths in the list filepaths.
 
 ### References
+(https://www.tutorialspoint.com/python/python_command_line_arguments.htm)
+(https://stackoverflow.com/questions/1124810/how-can-i-find-path-to-given-file)
+(https://stackoverflow.com/questions/48439995/while-try-except-in-python-3)
 
 ## Week 8 problem
 
