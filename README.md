@@ -110,8 +110,18 @@ A second elif statement prints a message saying that filename is not found if th
 (https://stackoverflow.com/questions/48439995/while-try-except-in-python-3)
 
 ## Week 8 problem
+Write a program called plottask.py that displays a plot of the functions f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4] on the one set of axes.
 
 ## Week 8 solution
+This code requires the use of the following modules: numpy, pyplot from matplotlib and interp1d from scipy.interpolate. A numpy array called xpoints defines domain of the functions that will be used in this code. The functions are created by defining variables f, g and h which are assigned the values of xpoints, the square of xpoints and the cube of xpoints respectively.
+
+The list names is created containing the names of the functions in TeX format. This will typeset the names and will be used in the legend.
+
+A function called xtickrange is defined to create a list that will contain the positions of the x-axis tickmarks. xtickrange takes in an argument called tickmax that defines the upper limit of the range. A variable, domain, is assigned the value of the range from 0 to tickmax. A list called ticklist is then initialised containing the value zero. Then, a while loop appends values that increment by 0.5 to ticklist while the max value of ticklist is less than the max value of domain.
+
+Lines 23 to 25 are code I researched that make g and h into smooth, curved lines. This code creates a series of intermediate points and plots them to approximate a smooth curve.
+
+pyplot functions are then used to plot and show the three functions on one plot. The third argument in each of the plt.plot functions determine the colour and line style for each plot. Further plt functions add labels to the axes, a title and turn on the minorticks and grid. The plt.xticks function calls xtickrange with 4 as the argument to create the set of x tick positions. plt.legend uses the TeX labels defined in names to add typeset names to the legend.
 
 ### References
 (https://stackoverflow.com/questions/5283649/plot-smooth-line-with-pyplot)
