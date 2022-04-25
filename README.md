@@ -5,8 +5,6 @@
 ## Introduction
 This repository will contain the commits for the weekly tasks on 52167 Programming and Scripting.
 
-## Licence
-
 ## Prerequisites
 This code was written on MS Visual Code (version 1.64.0) using Python 3.9.7. 
 Running code contained in this repository will require Python 3.9.7 or higher.
